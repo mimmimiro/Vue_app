@@ -1,12 +1,12 @@
 <template>
-	<counter />
+	<contact />
 </template>
 
 <script>
-import Counter from'../components/Counter.vue'
+import Counter from'../components/Contact.vue'
 export default {
 	components: {
-		Counter,
+		Contact,
 		},
 		};
 </script>
