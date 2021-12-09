@@ -16,14 +16,21 @@ export default {
 	data () {
 	 return {
 		 pages: [
-			{ title: 'kontakt oss', id: '' }, // fyll inn resterende
+			{ title: 'kontakt oss', id: '' }, // fyll inn resterende 
 			{ title: 'quiz', id: '' },
 			{ title: 'slideshow', id: '' },
 			{ title: 'table', id: '' },
 			{ title: 'to do list', id: '' },
 		]
 	}
+},
+/*
+computed: {
+	pagesFromStore() { 
+	return this.$store.getters ['getPages'] // logikk for å kunne ka ulike pages i head og footer, for eks. (kan kopieres til footer, samme sted(endre loopen)) refererer til en getter som henter variabelen for oss
 }
+} */
+
 };
 </script>
 

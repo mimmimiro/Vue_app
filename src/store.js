@@ -10,4 +10,19 @@ export default {
 			]
 		}
 	}, 
+
+
+/*
+getters: {
+	getPages(state) {
+		return state.pages;
+	}
+	},
+	mutations: {
+		addPage(state, page) {
+			state.navigation.pages.push(page)
+		}
+	}
+
+*/
 }
