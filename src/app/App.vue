@@ -1,12 +1,13 @@
 <template>
-	<contact />
+	<Header />
+	<RouterView />
 </template>
 
 <script>
-import Counter from'../components/Contact.vue'
+import Header from'../components/Header.vue'
 export default {
 	components: {
-		Contact,
+		Header,
 		},
 		};
 </script>
