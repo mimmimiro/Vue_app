@@ -10,5 +10,6 @@ body {
 	justify-content: space-between;
 	text-decoration: none;
 	background: gainsboro;
-	color: aquamarine;
+	color: cadetblue;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
