@@ -1,17 +1,25 @@
 <template>
- <Header />
-	<Slideshow />
+ 
+
+ 
+	<!--<Slideshow />-->
+	<!-- <Quiz />-->
 	<RouterView />
 </template>
 
 <script>
-import Header from '../components/Header.vue';
-import Slideshow from '../components/Slideshow.vue'; 
+// import Contact from '../components/Contact.vue';
+// import Slideshow from '../components/Slideshow.vue'; 
+// import Quiz from '../components/Quiz.vue';
 
 	export default {
 		components: {
-			Header,
-      Slideshow,
+			  
+			// Contact,
+     // Slideshow,
+		// Quiz,
 		},
+	
 	};
+
 </script>

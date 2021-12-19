@@ -1,5 +1,5 @@
 <template>
-  <h1>Heading</h1>
+  <h1>Favoritt reisemål</h1>
   <div>
     <transition-group name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  name: "Slider",
+  name: "Slideshow",
   data() {
     return {
       images: [
@@ -52,6 +52,10 @@ export default {
 </script>
 
 <style>
+h1 {
+  font-size: 25px;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.9s ease;
@@ -80,7 +84,7 @@ img {
   top: 40%;
   width: auto;
   padding: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.7s ease;
