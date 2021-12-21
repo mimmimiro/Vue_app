@@ -1,7 +1,7 @@
 <!-- kilde: https://vuejsexamples.com/tag/todo/
             https://v3.vuejs.org/guide/composition-api-template-refs.html#usage-inside-v-for-->
-<template class="todolist">
-
+<template >
+   <form class="todolist">
 	<h1 class="title">To Do List</h1>
 
 	<form class="container" @submit.prevent="addTodo()">
@@ -23,19 +23,21 @@
 				:class="{ done: todo.done }"
 				@click="doneTodo(todo)"
 			>{{ todo.content }}</span>
-			<button @click="removeTodo(index)">Remove</button>
+			<button class="todolist__button" @click="removeTodo(index)">Remove</button>
 		</li>
 	</ul>
 	<h4 class="container__list-title" v-if="todos.length === 0">List is empty!</h4>
 
 	</form>
 	
-
+</form>
 </template>
 
 <script>
 	import { ref } from 'vue';
 	export default {
+
+	
 		name: 'ToDoList',
 		setup () {
 			const newTodo = ref('');
@@ -86,7 +88,7 @@
         }    
     }
 
-.container {
+.todolist {
 	display: flex;
 		flex-flow: column nowrap;
 		font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -94,7 +96,10 @@
       max-width: 600px;
       width: 100%;
 }
-
+.container {
+	display: flex;
+	flex-direction: column;
+}
 .container__input {
 	   border: 1px solid black;
 		padding: 10px 10px;
@@ -103,6 +108,10 @@
 		
 }
 
+.container__button:hover {
+	background: darkcyan;
+	border: solid 1px darkcyan;
+}
 .container__button {
   background: #da552f;
   border: solid 1px #da552f;
@@ -116,9 +125,9 @@
   font-size: 0.4em;
 }
 	
-button:hover {
-  background: #ea532a;
-  border: solid 1px #ea532a;
+.todolist__button:hover {
+  background: darkcyan;
+  border: solid 1px darkcyan;
 }
 
 .title {

@@ -1,8 +1,9 @@
 <!-- kilde: https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components -->
 
 <template>
-  <h1 class="first-title">Travel</h1>
-  <section>
+ <section class="slideshow">
+  <h1 class="slideshow__first-title">Travel</h1>
+ </section>
     <transition-group name="fade" tag="div">
       <div class="slide-image" v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
@@ -10,7 +11,7 @@
     </transition-group>
     <button class="previous" @click="previous" > &lt; Previous</button>
     <button class="next" @click="next" > &gt; Next</button>
-  </section>
+  
 </template>
 <script>
 export default {
@@ -33,7 +34,7 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 3000);
+      this.timer = setInterval(this.next, 2000);
     },
 
     next: function() {
@@ -53,7 +54,15 @@ export default {
 </script>
 
 <style>
-.first-title {
+.slideshow {
+  display: flex;
+		flex-flow: column nowrap;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0 auto;
+      max-width: 600px;
+      width: 100%;
+}
+.slideshow__first-title {
   font-size: 35px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
@@ -113,7 +122,9 @@ img {
 }
 
 .previous:hover, .next:hover {
-  background-color: rgba(0,0,0,0.9);
+  background: darkcyan;
+  border: solid 1px darkcyan;
+  color: black;
 }
 
 @media only screen and (max-width: 480px) {

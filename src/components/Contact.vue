@@ -88,7 +88,7 @@ export default {
 }
 	
 .contact-form button:hover {
-  background: #ea532a;
-  border: solid 1px #ea532a;
+  background: darkcyan;
+  border: solid 1px darkcyan;
 }
 </style>

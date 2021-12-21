@@ -1,8 +1,9 @@
 <!-- kilde: undervisning med Alejandro V. Rojas-->
 <template>
-
-<h1 class="table-title">Awesome table</h1>
-	<table>
+<section class="table-header">
+<h1 class="table-header__title">Awesome table</h1>
+</section>
+	<table >
 		<thead>
 			<tr>
 				<td><button @click="sortBy('id')">ID</button></td>
@@ -17,6 +18,7 @@
 			</tr>
 		</tbody>
 	</table>
+	
 </template>
 
 <script>
@@ -104,16 +106,26 @@ export default {
 </script>
 
 <style>
+
+.table-header {
+	display: flex;
+		flex-flow: column nowrap;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0 auto;
+      max-width: 600px;
+      width: 100%;
+}
 	table {
-		width: 40vw;
+		width: 60vw;
+		height: 60vh;
 		border-collapse: collapse;
 		font-family: Verdana, Geneva, Tahoma, sans-serif;
 		margin-top: 30px;
-		margin-left: 390px;
+		margin-left: 260px;
 		
 	}
 
-	.table-title {
+	.table-header__title {
 		font-size: 1em;
 		border-bottom: solid 4px darkcyan;
 		text-align: center;
