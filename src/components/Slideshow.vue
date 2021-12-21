@@ -1,15 +1,15 @@
 <!-- kilde: https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components -->
 
 <template>
-  <h1 class="first-title">Favourite destinations</h1>
+  <h1 class="first-title">Travel</h1>
   <section>
     <transition-group name="fade" tag="div">
-      <div v-for="i in [currentIndex]" :key="i">
+      <div class="slide-image" v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
       </div>
     </transition-group>
-    <a class="previous" @click="previous" href="#"> &lt; Previous</a>
-    <a class="next" @click="next" href="#"> &gt; Next</a>
+    <button class="previous" @click="previous" > &lt; Previous</button>
+    <button class="next" @click="next" > &gt; Next</button>
   </section>
 </template>
 <script>
@@ -19,8 +19,8 @@ export default {
     return {
       images: [
           "./assets/amsterdam.jpg" ,
-				  "./assets/sveits.jpeg" ,
-				  "./assets/london.jpeg" ,
+				  "./assets/london.jpg" ,
+				  "./assets/sveits.jpg" ,
       ],
       timer: null,
       currentIndex: 0
@@ -33,7 +33,7 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 2500);
+      this.timer = setInterval(this.next, 3000);
     },
 
     next: function() {
@@ -80,8 +80,9 @@ export default {
 
 img {
     margin-left: 130px;
-		width: 80vw;
-		height: 80vh;
+		width: 80%;
+    height: 80%;
+    object-fit: cover;
 }
 
 .previous, .next {
@@ -89,15 +90,18 @@ img {
   position: absolute;
   top: 70%;
   width: auto;
-  padding: 16px;
+  padding: 10px 14px;
   color: darkcyan;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 15px;
   transition: 0.7s ease;
   border-radius: 0 4px 4px 0;
   text-decoration: none;
   user-select: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .next {
@@ -110,5 +114,11 @@ img {
 
 .previous:hover, .next:hover {
   background-color: rgba(0,0,0,0.9);
+}
+
+@media only screen and (max-width: 480px) {
+img {
+width: 100%;
+}
 }
 </style>

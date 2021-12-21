@@ -1,4 +1,5 @@
-<!-- kilde: https://vuejsexamples.com/tag/todo/-->
+<!-- kilde: https://vuejsexamples.com/tag/todo/
+            https://v3.vuejs.org/guide/composition-api-template-refs.html#usage-inside-v-for-->
 <template class="todolist">
 
 	<h1 class="title">To Do List</h1>
@@ -124,6 +125,7 @@ button:hover {
 	border-bottom: solid 4px darkcyan;
 	font-size: 1em;
 	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container__title {
 border-bottom: solid 4px darkcyan;

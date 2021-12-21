@@ -109,7 +109,7 @@ export default {
 		border-collapse: collapse;
 		font-family: Verdana, Geneva, Tahoma, sans-serif;
 		margin-top: 30px;
-		margin-left: 360px;
+		margin-left: 390px;
 		
 	}
 
@@ -117,6 +117,7 @@ export default {
 		font-size: 1em;
 		border-bottom: solid 4px darkcyan;
 		text-align: center;
+		font-family: Verdana, Geneva, Tahoma, sans-serif
 	}
 
 	button {
@@ -137,7 +138,7 @@ export default {
 	}
 
 	table tr {
-		border: 2px solid black;
+		border: 2px solid darkcyan;
 	}
 
 	table td {
@@ -148,4 +149,11 @@ export default {
 	table button:hover {
 		color: darkcyan;
 	}
+
+	@media screen and (max-width: 768px) {
+        table {
+            margin-left: 5px;
+        }
+    }
 </style>
+
