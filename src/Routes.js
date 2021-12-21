@@ -6,7 +6,6 @@ import ToDoList from './components/ToDoList.vue';
 import Quiz from './components/Quiz.vue';
 
 export default [
-	// { name: 'page', Path: '/:page_id'  component:}
 	{ name: 'home', Path: '/', component: Home}, 
 	 { name: 'slideshow', path: '/Slideshow', component: Slideshow },
 	 { name: 'contact', path: '/Contact', component: Contact },
