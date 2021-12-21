@@ -1,14 +1,16 @@
+<!-- kilde: https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components -->
+
 <template>
-  <h1>Favourite destinations</h1>
-  <div>
+  <h1 class="first-title">Favourite destinations</h1>
+  <section>
     <transition-group name="fade" tag="div">
       <div v-for="i in [currentIndex]" :key="i">
-        <img :src="currentImage" />
+        <img :src="currentImg" />
       </div>
     </transition-group>
     <a class="previous" @click="previous" href="#"> &lt; Previous</a>
     <a class="next" @click="next" href="#"> &gt; Next</a>
-  </div>
+  </section>
 </template>
 <script>
 export default {
@@ -16,9 +18,9 @@ export default {
   data() {
     return {
       images: [
-        {  file: 'assets/amsterdam.jpeg' },
-				{  file: 'assets/surf.jpeg' },
-				{  file: 'assets/dog.jpeg' },
+          "./assets/amsterdam.jpg" ,
+				  "./assets/sveits.jpeg" ,
+				  "./assets/london.jpeg" ,
       ],
       timer: null,
       currentIndex: 0
@@ -31,7 +33,7 @@ export default {
 
   methods: {
     startSlide: function() {
-      this.timer = setInterval(this.next, 3000);
+      this.timer = setInterval(this.next, 2500);
     },
 
     next: function() {
@@ -43,7 +45,7 @@ export default {
   },
 
   computed: {
-    currentImage: function() {
+    currentImg: function() {
       return this.images[Math.abs(this.currentIndex) % this.images.length];
     }
   }
@@ -51,12 +53,12 @@ export default {
 </script>
 
 <style>
-h1 {
+.first-title {
   font-size: 35px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   border-bottom: solid 4px darkcyan;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .fade-enter-active,
@@ -88,13 +90,14 @@ img {
   top: 70%;
   width: auto;
   padding: 16px;
-  color: whitesmoke;
+  color: darkcyan;
   font-weight: bold;
   font-size: 28px;
   transition: 0.7s ease;
   border-radius: 0 4px 4px 0;
   text-decoration: none;
   user-select: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .next {

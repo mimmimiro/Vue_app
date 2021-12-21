@@ -1,9 +1,6 @@
 <template>
  
 
- 
-	<!--<Slideshow />-->
-	<!-- <Quiz />-->
 	<RouterView />
 </template>
 

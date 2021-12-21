@@ -3,13 +3,3 @@ body {
 	color: var(--foreground);
 	font-size: var(--font-size);
 }
-
-.header {
-	padding: 30px;
-	display: flex;
-	justify-content: space-between;
-	text-decoration: none;
-	background: gainsboro;
-	color: cadetblue;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-}

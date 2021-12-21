@@ -1,11 +1,11 @@
 <template>
-	<div id="test">
-  <div v-for="(question, index) in quiz">
+	<form class="quiz">
+  <div v-for="(question, index) in quiz" :key="question">
     <div v-show="index === questionIndex">
 
       <p>This is question number {{ index }}</p>
-      <p>The speed is {{question.speed}}</p>
-      <p>What is the distance?</p>
+      <p> The recommended amount of dinner  {{question.dinner}}</p>
+      <p>What do you think?</p>
       <br />
 
       <span>
@@ -31,25 +31,26 @@
     next
   </button>
   <br>
-  <button v-show="questionIndex > 0" v-on:click="prev">
-    prev
+  <button v-show="questionIndex > 0" v-on:click="previous">
+    previous
   </button>
 
 
-</div>
+  </form>
 </template>
 
 <script>
 
 var quiz = [
   {
-    speed: 50,
-    answer1: 10,
-    answer2: 20,
-    correct_answer: 20
+    Dinner: 50,
+    answer1: 5,
+    answer2: 2,
+    answer3: 1,
+    correct_answer: 2
   },
   {
-    speed: 60,
+    dinner: 60,
     answer1: 20,
     answer2: 30,
     correct_answer: 30
@@ -60,9 +61,12 @@ export default {
     
 
   data() {
+    return { 
+
     questionIndex: 0,
     quiz: quiz,
-    pick: "none"
+    pick: "none",
+    };
   },
 
   methods: {
@@ -76,7 +80,7 @@ export default {
       if (this.pick === quiz[this.questionIndex].correct_answer) {
         alert("good job!");
       } else {
-        alert("try again!");
+        alert("You suck!");
       }
     }
   }

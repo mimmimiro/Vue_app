@@ -1,6 +1,7 @@
+<!-- kilde: undervisning med Alejandro V. Rojas-->
 <template>
 	<form class="contact-form">
-		<h1 class="contact-form_title">Contact Form</h1>
+		<h1 class="contact-form__title">Contact Form</h1>
     <div class="separator"></div>
 		<input class="contact-form__input" type="text" placeholder="Name" v-model="form.name" />
 		<input class="contact-form__input" type="email" placeholder="E-mail" v-model="form.email" />
@@ -19,7 +20,9 @@ export default {
 					name: null,
 					email: null,
 					message: null,
+					resetForm: null,
 				},
+				
 			};
 		},
 
@@ -27,8 +30,11 @@ export default {
 			submit_form() {
 				alert(`Thank you, !`);
 			},
+			reset() {
+      this.resetForm = null;
 		},
-	};
+	},
+};
 </script>
 
 <style>
@@ -41,8 +47,9 @@ export default {
       width: 100%;
 		
 	}
-	.contact-form_title {
+	.contact-form__title {
 		font-size: 1em;
+		border-bottom: solid 4px darkcyan;
 	}
 	.contact-form .separator {
   border-bottom: solid 4px darkcyan;
