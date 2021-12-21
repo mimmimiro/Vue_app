@@ -6,8 +6,8 @@
     <div v-show="index === questionIndex">
 
       <p class="quiz__second-title">This is question number {{ index }}</p>
-      <p class="quiz__third-title">The year is {{question.speed}}</p>
-      <p class="quiz__firth-title">What day is newyears eve?</p>
+      <p class="quiz__third-title">If the speed is {{question.speed}}</p>
+      <p class="quiz__firth-title">Whats the distanse?</p>
       <br />
      <ul class="quiz__options">
       <span class="quiz__span">
