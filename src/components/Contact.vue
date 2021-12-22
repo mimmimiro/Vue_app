@@ -6,7 +6,7 @@
 		<input class="contact-form__input" type="text" placeholder="Name" v-model="form.name" />
 		<input class="contact-form__input" type="email" placeholder="E-mail" v-model="form.email" />
 		<input class="contact-form__input-message" type="textarea" placeholder="Message" v-model="form.message" />
-
+      <!-- added a reset button, to clear the form when clicked-->
 		<button @click="submit_form">Submit</button>
 		<button @click="reset_form">reset</button>
 	</form>

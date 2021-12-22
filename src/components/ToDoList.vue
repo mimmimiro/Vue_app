@@ -3,7 +3,7 @@
 <template >
    <form class="todolist">
 	<h1 class="title">To Do List</h1>
-
+<!-- this v-model is connected to the setup object and function in the script-->
 	<form class="container" @submit.prevent="addTodo()">
 		<h3 class="container__title">New Task </h3>
 		<input class="container__input"
@@ -15,6 +15,7 @@
 	
 	<h3 class="container__title-second">To Do List</h3>
 	<ul>
+		<!-- connected to the donetodo and removetodo function in the script-->
 		<li
 			v-for="(todo, index) in todos"
 			:key="index"
@@ -26,6 +27,7 @@
 			<button class="todolist__button" @click="removeTodo(index)">Remove</button>
 		</li>
 	</ul>
+	<!-- if the todolist is empty - this text will apear-->
 	<h4 class="container__list-title" v-if="todos.length === 0">List is empty!</h4>
 
 	</form>
@@ -37,7 +39,7 @@
 	import { ref } from 'vue';
 	export default {
 
-	
+	// connected to the v-model
 		name: 'ToDoList',
 		setup () {
 			const newTodo = ref('');
@@ -56,6 +58,7 @@
 					newTodo.value = '';
 				}
 				saveData();
+				
 			}
 			function doneTodo (todo) {
 				todo.done = !todo.done

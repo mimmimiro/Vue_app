@@ -1,17 +1,17 @@
 <!-- jeg valgte bevisst å designe forsiden min slik. Jeg vet at man kan importere componentene og 
 legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 <template>
-	<div class="home">
+	<section class="home">
  <RouterLink class="home__contact" :to="{ name: 'contact', path: '/Contact', component: Contact }">Contact</RouterLink>
  <RouterLink class="home__todolist" :to="{ name: 'todolist', path: '/ToDoList', component: ToDoList }">ToDoList</RouterLink>
 <RouterLink class="home__quiz" :to="{ name: 'quiz', path: '/Quiz', component: Quiz }">Quiz</RouterLink>
  <RouterLink class="home__slideshow" :to="{ name: 'slideshow', path: '/Slideshow', component: Slideshow }">Slideshow</RouterLink>
  <RouterLink class="home__table" :to="{ name: 'table', path: '/Table', component: Table }">Table</RouterLink>
-</div>
-<article class="article">
+</section>
+<footer class="article">
 	<h1 class="article__title"> The invention of the app </h1>
 	<h5 class="article__brand">@CartaDesign</h5>
-</article>
+</footer>
 </template>
 
 <script>

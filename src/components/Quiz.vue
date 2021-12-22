@@ -4,11 +4,13 @@
   <h1 class="quiz__title">Try my quiz!</h1>
   <div v-for="(question, index) in quiz" :key="index">
     <div v-show="index === questionIndex">
-
+      <!-- start page will always start at inden 1, the question is static, but the answrs will change for each page-->
       <p class="quiz__second-title">This is question number {{ index }}</p>
       <p class="quiz__third-title">If the speed is {{question.speed}}</p>
       <p class="quiz__firth-title">Whats the distanse?</p>
       <br />
+
+      <!--  added more options for each question-->
      <ul class="quiz__options">
       <span class="quiz__span">
         <input class="quiz__input" id="RadioA"  type="radio" v-model="pick" v-bind:value="question.answer1">
@@ -27,6 +29,7 @@
     </div>
   </div>
   <br>
+  <!-- chech your answer with these button, it will reset if  you pick the wrong answer-->
   <button class="quiz__button" v-on:click="check">
     check
   </button>
@@ -48,41 +51,42 @@
 
 
 <script>
+// added more question pages = the variabel can be as large as desired-->
 var quiz = [
   {
     speed: 50,
-    answer1: Monday,
-    answer2: Saturday,
-    answer3: Sunday,
-    correct_answer: 50
-  },
-  {
-    speed: 20,
-    answer1: Wednesday,
-    answer2: Saturday,
-    answer3: Thursday,
+    answer1:40 ,
+    answer2: 20,
+    answer3: 70,
     correct_answer: 20
   },
   {
+    speed: 20,
+    answer1: 10,
+    answer2: 40,
+    answer3: 30,
+    correct_answer: 30
+  },
+  {
     speed: 80,
-    answer1: Sunday,
-    answer2: Monday,
-    answer3: Wednesday,
+    answer1: 90,
+    answer2: 30,
+    answer3: 20,
     correct_answer: 30
   },
   {
     speed: 60,
-    answer1: Saturday,
-    answer2: Friday,
-    answer3: Sunday,
+    answer1: 40,
+    answer2: 60,
+    answer3: 80,
     correct_answer: 40
   },
   {
     speed: 10,
-    answer1: Sunday,
-    answer2: Wednesday,
-    answer3: Monday,
-    correct_answer: 40
+    answer1: 20,
+    answer2: 100,
+    answer3: 30,
+    correct_answer: 100
   },
 ];
 
@@ -97,7 +101,7 @@ data() {
     pick: "none"
     };
   },
-
+// the methods for the buttons - the check button have alerts for the wrong and rifht answer
   methods: {
     next: function() {
       this.questionIndex++;

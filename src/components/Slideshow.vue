@@ -1,9 +1,10 @@
-<!-- kilde: https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components -->
+<!-- kilde: https://v3.vuejs.org/api/built-in-components.html#transition -->
 
 <template>
  <section class="slideshow">
   <h1 class="slideshow__first-title">Travel</h1>
  </section>
+   <!-- transtion-group component in Vue.js,  images will iterate.-->
     <transition-group name="fade" tag="div">
       <div class="slide-image" v-for="i in [currentIndex]" :key="i">
         <img :src="currentImg" />
@@ -14,6 +15,7 @@
   
 </template>
 <script>
+//  Timer is set to null and  currentIndex to 0 for showing the first image.
 export default {
   name: "Slideshow",
   data() {
@@ -31,7 +33,7 @@ export default {
   mounted: function() {
     this.startSlide();
   },
-
+//  startSlide function for sliding images every 2 seconds.
   methods: {
     startSlide: function() {
       this.timer = setInterval(this.next, 2000);
@@ -55,9 +57,9 @@ export default {
 
 <style>
 .slideshow {
-  display: flex;
-		flex-flow: column nowrap;
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
+      display: flex;
+		  flex-flow: column nowrap;
+		  font-family: Verdana, Geneva, Tahoma, sans-serif;
       margin: 0 auto;
       max-width: 600px;
       width: 100%;
