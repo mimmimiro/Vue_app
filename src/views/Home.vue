@@ -45,7 +45,7 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	color: rgb(3, 82, 82);
 	font-family: var(--font-family);
 	}
-
+	
 	.home__todolist {
 	display: inline-block;
 	background: #da552f;
@@ -62,6 +62,9 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	font-family: var(--font-family);
 	}
 
+.home__todolist:hover {
+	color: blanchedalmond;
+}
 	.home__quiz {
 	display: inline-block;
 	background: #da552f;
@@ -77,6 +80,10 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	color: rgb(3, 82, 82);
 	font-family: var(--font-family);
 	}
+
+	.home__quiz:hover {
+	color: blanchedalmond;
+}
 	
 
 	.home__slideshow {
@@ -95,7 +102,11 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	color: rgb(3, 82, 82);
 	font-family: var(--font-family);
 	}
+   .home__slideshow:hover {
+	
+	color: blanchedalmond;
 
+ }
 	.home__table {
 	display: inline-block;
 	background: #da552f;
@@ -111,6 +122,16 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	text-decoration: none;
 	color: rgb(3, 82, 82);
 	font-family: var(--font-family);
+	}
+	.home__table:hover {
+		
+	color: blanchedalmond;
+}
+	
+
+.home__contact:hover
+ {
+		color: blanchedalmond;
 	}
 
 .article__title {

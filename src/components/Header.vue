@@ -31,7 +31,7 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	text-decoration: none;
-	background: gainsboro;
+	background: linear-gradient(to left, rgb(228, 227, 227), rgb(216, 173, 146) ) ;
 	
 }
 
