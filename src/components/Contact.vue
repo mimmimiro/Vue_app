@@ -54,7 +54,7 @@ export default {
   .contact-form .separator {
      border-bottom: solid 4px darkcyan;
      margin-bottom: 15px;
-}
+   }
 
   .contact-form__input {
 	  margin-bottom: 0.5em;
@@ -85,10 +85,10 @@ export default {
     letter-spacing: 0.2em;
     margin-top: 0.5em;
     font-size: 0.4em;
-}
+   }
 	
   .contact-form button:hover {
     background: darkcyan;
     border: solid 1px darkcyan;
-}
+   }
 </style>
