@@ -13,16 +13,16 @@
       <!--  added more options for each question-->
       <ul class="quiz__options">
       <span class="quiz__span">
-        <input class="quiz__input" id="RadioA"  type="radio" v-model="pick" v-bind:value="question.answer1">
+        <input class="quiz__input" id="RadioA"  type="radio" v-model="pick" :value="question.answer1">
         <label class="quiz__label" for="RadioA">{{question.answer1}}</label>
       </span>
        <br>
       <span class="quiz__span">
-        <input class="quiz__input" id="RadioB" type="radio" v-model="pick" v-bind:value="question.answer2" >
+        <input class="quiz__input" id="RadioB" type="radio" v-model="pick" :value="question.answer2" >
         <label class="quiz__label" for="RadioB">{{question.answer2}}</label>
       </span>
       <span class="quiz__span">
-        <input class="quiz__input" id="RadioC" type="radio" v-model="pick" v-bind:value="question.answer3" >
+        <input class="quiz__input" id="RadioC" type="radio" v-model="pick" :value="question.answer3" >
         <label class="quiz__label" for="RadioC">{{question.answer3}}</label>
       </span>
       </ul>
@@ -31,17 +31,17 @@
   <br>
 
     <!-- chech your answer with these button, it will reset if  you pick the wrong answer-->
-      <button class="quiz__button" v-on:click="check">
+      <button class="quiz__button" @click="check">
       check
       </button>
   <br>
 
   <br>
-      <button class="quiz__button" v-on:click="next">
+      <button class="quiz__button" @click="next">
       next
       </button>
   <br>
-      <button class="quiz__button" v-show="questionIndex > 1" v-on:click="prev">
+      <button class="quiz__button" v-show="questionIndex > 1" @click="prev">
       prev
      </button>
 </section>
