@@ -114,7 +114,7 @@ export default {
       margin: 0 auto;
       max-width: 600px;
       width: 100%;
-}
+   }
 	table {
 		width: 60vw;
 		height: 60vh;
@@ -144,7 +144,7 @@ export default {
 
 .button__table {
 	padding: 10px 30px;
-}
+   }
 	table thead {
 		font-weight: bold;
 	}
