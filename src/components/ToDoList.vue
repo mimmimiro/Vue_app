@@ -37,6 +37,7 @@
 </template>
 
 <script>
+   // composition API, makes the variabels reactive
 	import { ref } from 'vue';
 	export default {
 	   // connected to the v-model
@@ -119,58 +120,58 @@
    }
 
   .container__button {
-    background: #da552f;
-    border: solid 1px #da552f;
-    color: white;
-    cursor: pointer;
-    padding: 20px 70px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-top: 0.5em;
-    font-size: 0.4em;
-  }
+     background: #da552f;
+     border: solid 1px #da552f;
+     color: white;
+     cursor: pointer;
+     padding: 20px 70px;
+     text-align: center;
+     text-transform: uppercase;
+     letter-spacing: 0.2em;
+     margin-top: 0.5em;
+     font-size: 0.4em;
+   }
 	
   .todolist__button:hover {
-    background: darkcyan;
-    border: solid 1px darkcyan;
-  }
+     background: darkcyan;
+     border: solid 1px darkcyan;
+   }
 
   .title {
-	 border-bottom: solid 4px darkcyan;
-	 font-size: 1em;
-	 text-align: center;
-	 font-family: Verdana, Geneva, Tahoma, sans-serif;
- }
+	  border-bottom: solid 4px darkcyan;
+	  font-size: 1em;
+	  text-align: center;
+	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
 
   .container__title {
-    border-bottom: solid 4px darkcyan;
-    font-size: 0.8em;
- }
+     border-bottom: solid 4px darkcyan;
+     font-size: 0.8em;
+   }
 
   .container__title-second {
 	  border-bottom: solid 3px darkcyan;
 	  font-size: 0.8em;
 	  font-weight: 600;
-} 
+   } 
 
   .container__title
   .container__title-second 
   .title {
 	  font-family: Verdana, Geneva, Tahoma, sans-serif;
 	
-}
+  }
 
   .container__list-title {
      border-bottom: solid 2px darkcyan;
 	  font-size: 0.7em;
 	  font-family: Verdana, Geneva, Tahoma, sans-serif;
 	  font-weight: 500;
-}
+   }
 
   ul {
 		padding: 10px;
-}
+  }
 
   li {
 		display: flex;
@@ -182,12 +183,13 @@
 		padding: 10px 10px;
 		font-size: 0.7em;
 		margin-bottom: 0.5em;
-}
+   }
 			
 	span {
 		cursor: pointer;
-}
+   }
+	
 	.done {
 		text-decoration: line-through;
-}
+   }
 </style>
