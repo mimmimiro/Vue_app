@@ -34,7 +34,7 @@
 
   .header__navigation {
 	  color: darkcyan;
-	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  font-family: var(--font-family);
 	  font-size: 25px;
 	  text-decoration: none;
   }

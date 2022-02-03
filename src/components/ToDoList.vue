@@ -95,7 +95,7 @@
   .todolist {
 	  display: flex;
 	  flex-flow: column nowrap;
-	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  font-family: var(--font-family);
      margin: 0 auto;
      max-width: 600px;
      width: 100%;
@@ -141,7 +141,7 @@
 	  border-bottom: solid 4px darkcyan;
 	  font-size: 1em;
 	  text-align: center;
-	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  font-family: var(--font-family);
    }
 
   .container__title {
@@ -158,14 +158,14 @@
   .container__title
   .container__title-second 
   .title {
-	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  font-family: var(--font-family);
 	
   }
 
   .container__list-title {
      border-bottom: solid 2px darkcyan;
 	  font-size: 0.7em;
-	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  font-family: var(--font-family);
 	  font-weight: 500;
    }
 

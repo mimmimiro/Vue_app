@@ -17,10 +17,10 @@ export default {
 		data() {
 			return {
 				form: {
-					name: null,
-					email: null,
-					message: null,
-					resetForm: null,
+				name: null,
+				email: null,
+				message: null,
+				resetForm: null,
 				},
 				
 			};
@@ -41,7 +41,7 @@ export default {
   .contact-form {
 	  display: flex;
 	  flex-flow: column nowrap;
-	  font-family: Verdana, Geneva, Tahoma, sans-serif;
+	  font-family: var(--font-family);
      margin: 0 auto;
      max-width: 600px;
      width: 100%;

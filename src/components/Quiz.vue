@@ -125,7 +125,7 @@ var quiz = [
   .quiz {
     display: flex;
 		flex-flow: column nowrap;
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-family: var(--font-family);
     margin: 0 auto;
     max-width: 600px;
     width: 100%;

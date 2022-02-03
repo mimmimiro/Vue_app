@@ -36,21 +36,21 @@
 
    //  startSlide function for sliding images every 2 seconds.
   methods: {
-    startSlide: function() {
+    startSlide() {
       this.timer = setInterval(this.next, 2000);
     },
 
-    next: function() {
+    next() {
       this.currentIndex += 1;
     },
 
-    previous: function() {
+    previous() {
       this.currentIndex -= 1;
     }
   },
 
   computed: {
-    currentImg: function() {
+    currentImg() {
       return this.images[Math.abs(this.currentIndex) % this.images.length];
     }
   }
