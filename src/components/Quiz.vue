@@ -6,11 +6,12 @@
       <div v-show="index === questionIndex">
       <!-- start page will always start at index 1, the question is static, but the answrs will change for each page-->
       <p class="quiz__second-title">This is question number {{ index }}</p>
-      <p class="quiz__third-title">If the speed is {{question.speed}}</p>
-      <p class="quiz__firth-title">Whats the distanse?</p>
+      <p class="quiz__third-title">If the amount is {{question.time}} hours?</p>
+      <p class="quiz__firth-title">How many seconds is there?</p>
       <br />
 
-      <!--  added more options for each question-->
+      <!-- added more options for each question-->
+      <!-- v-bind creates binding with answers and v-model is binded to pick, witch is set to none-->
       <ul class="quiz__options">
       <span class="quiz__span">
         <input class="quiz__input" id="RadioA"  type="radio" v-model="pick" :value="question.answer1">
@@ -41,6 +42,7 @@
       next
       </button>
   <br>
+     <!-- the previous button appears only when the question page is larger than 1 -->
       <button class="quiz__button" v-show="questionIndex > 1" @click="prev">
       prev
      </button>
@@ -53,41 +55,46 @@
 // added more question pages = the variabel can be as large as desired-->
 var quiz = [
   {
-    speed: 50,
-    answer1:40 ,
-    answer2: 20,
-    answer3: 70,
-    correct_answer: 20
+    time: 1,
+    answer1: 1000 ,
+    answer2: 3600,
+    answer3: 4000,
+    correct_answer: 3600
   },
+
   {
-    speed: 20,
-    answer1: 10,
-    answer2: 40,
-    answer3: 30,
-    correct_answer: 30
+    time: 2,
+    answer1: 1500,
+    answer2: 4600,
+    answer3: 7200,
+    correct_answer: 7200
   },
+ 
   {
-    speed: 80,
-    answer1: 90,
-    answer2: 30,
-    answer3: 20,
-    correct_answer: 30
+    time: 3,
+    answer1: 10800,
+    answer2: 7600,
+    answer3: 9500,
+    correct_answer: 10800
   },
+
   {
-    speed: 60,
-    answer1: 40,
-    answer2: 60,
-    answer3: 80,
-    correct_answer: 40
+    time: 4,
+    answer1: 5300,
+    answer2: 14400,
+    answer3: 9100,
+    correct_answer: 14400
   },
+
   {
-    speed: 10,
-    answer1: 20,
-    answer2: 100,
-    answer3: 30,
-    correct_answer: 100
+    time: 5,
+    answer1: 18000,
+    answer2: 10200,
+    answer3: 11300,
+    correct_answer: 18000
   },
-];
+   
+  ];
 
 
   export default { 
@@ -100,15 +107,15 @@ var quiz = [
   },
    // the methods for the buttons - the check button have alerts for the wrong and right answer
     methods: {
-      next: function() {
+    next() {
       this.questionIndex++;
     },
 
-    prev: function() {
+    prev() {
       this.questionIndex--;
     },
 
-    check: function() {
+    check() {
       if (this.pick === quiz[this.questionIndex].correct_answer) {
         alert("good job!");
       } else {
