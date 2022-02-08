@@ -48,6 +48,7 @@
 				done: false,
 				content: null
 			}]
+			// The parse method, converts the json string to an object
 			const todosData = JSON.parse(localStorage.getItem('todos')) || defaultData;
 			const todos = ref(todosData);
 			function addTodo () {
