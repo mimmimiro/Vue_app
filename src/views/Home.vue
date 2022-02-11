@@ -36,11 +36,11 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	 margin: 60px;
 	 border-radius: 130px;
 	 text-align: center;
-	 font-size: 22px;
+	 font-size: 30px;
 	 font-weight: bold;
 	 padding-top: 130px;
 	 text-decoration: none;
-	 color: rgb(3, 82, 82);
+	 color: blanchedalmond;
 	 font-family: var(--font-family);
 	}
 	
@@ -53,15 +53,15 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	  border-radius: 180px;
 	  text-align: center;
 	  line-height: 190px;
-	  font-size: 20px;
+	  font-size: 30px;
 	  font-weight: bold;
 	  text-decoration: none;
-	  color: rgb(3, 82, 82);
+	  color: blanchedalmond;
 	  font-family: var(--font-family);
 	}
 
    .home__todolist:hover {
-	  color: blanchedalmond;
+	  color: rgb(3, 82, 82);
    }
 
 	.home__quiz {
@@ -73,15 +73,15 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	  border-radius: 150px;
 	  text-align: center;
 	  line-height: 190px;
-	  font-size: 20px;
+	  font-size: 30px;
 	  font-weight: bold;
 	  text-decoration: none;
-	  color: rgb(3, 82, 82);
+	  color: blanchedalmond;
 	  font-family: var(--font-family);
 	}
 
 	.home__quiz:hover {
-	  color: blanchedalmond;
+	  color: rgb(3, 82, 82);
    }
 	
 
@@ -94,16 +94,16 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	  border-radius: 150px;
 	  text-align: center;
 	  line-height: 20px;
-	  font-size: 25px;
+	  font-size: 30px;
 	  font-weight: bold;
 	  padding-top: 130px;
 	  text-decoration: none;
-	  color: rgb(3, 82, 82);
+	  color: blanchedalmond;
 	  font-family: var(--font-family);
 	}
 
    .home__slideshow:hover {
-	  color: blanchedalmond;
+	  color: rgb(3, 82, 82);
    }
 
 	.home__table {
@@ -115,20 +115,20 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 	  border-radius: 130px;
 	  text-align: center;
 	  line-height: 30px;
-	  font-size: 20px;
+	  font-size: 30px;
 	  font-weight: bold;
 	  padding-top: 150px;
 	  text-decoration: none;
-	  color: rgb(3, 82, 82);
+	  color: blanchedalmond;
 	  font-family: var(--font-family);
 	}
 
 	.home__table:hover {	
-	  color: blanchedalmond;
+	  color: rgb(3, 82, 82);
   }
 	
    .home__contact:hover {
-	  color: blanchedalmond;
+	  color: rgb(3, 82, 82);
 	}
 
   .article__title {
