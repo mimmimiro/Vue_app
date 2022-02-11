@@ -1,4 +1,4 @@
-<!-- kilde: https://vuejsexamples.com/tag/todo/
+<!-- kilde: https://vuejsexamples.com/todo-app-with-vue/
             https://v3.vuejs.org/guide/composition-api-template-refs.html#usage-inside-v-for-->
 <template >
    <form class="todolist">
