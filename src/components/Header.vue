@@ -24,7 +24,7 @@
 <style>
     
   .header {
-    padding: 30px;
+    padding: 50px;
 	 display: flex;
 	 justify-content: space-between;
 	 text-decoration: none;
@@ -35,7 +35,7 @@
   .header__navigation {
 	  color: darkcyan;
 	  font-family: var(--font-family);
-	  font-size: 25px;
+	  font-size: 30px;
 	  text-decoration: none;
   }
 
