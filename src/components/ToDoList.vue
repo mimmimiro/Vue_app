@@ -1,16 +1,49 @@
 <!-- kilde: https://vuejsexamples.com/tag/todo/
             https://v3.vuejs.org/guide/composition-api-template-refs.html#usage-inside-v-for-->
 <template >
-   <form class="todolist">
+ <h1>{{ title }}</h1>
+	
+	<span>{{ task }}</span>
+	<button v-on:click="addTask">Add new task</button>
+</template>
+
+<script>
+export default {
+	name: 'home',
+	data() {
+		return {
+			title: 'Add Task',
+			task: '',
+			
+		}
+	},
+	created() {
+		this.addTask();
+	},
+
+	methods: {
+		async addTask() {
+			const url = 'https://randomuser.me/api/?page=2&results=20';
+			const res = await fetch(url);
+			const { results }   = await res.json();
+			this.name = `${results[0].name.first} ${results[0].name.last}`;
+			
+		}
+	}
+}
+	
+
+/*
+ <form class="todolist">
 	   <h1 class="title">To Do List</h1>
      <!-- this v-model is connected to the setup object and function in the script-->
-	<form class="container" @submit.prevent="addTodo()">
+	<form class="container" @submit="addNewTodo()">
 		<h3 class="container__title">New Task </h3>
 		<input class="container__input"
-			v-model="newTodo"
-			name="newTodo"
-			autocomplete="off"
+			v-model="todoList"
 		>
+		<!-- name="newTodo" 
+			 autocomplete="off" -->
 		<button class="container__button">Add Task</button>
 	
 	   <h3 class="container__title-second">To Do List</h3>
@@ -33,10 +66,7 @@
 
 	</form>
 	
-  </form>
-</template>
-
-<script>
+  </form> 
    // composition API, makes the variabels reactive
 	import { ref } from 'vue';
 	export default {
@@ -83,7 +113,7 @@
 				saveData
 			}
 		}
-	}
+	}*/
 </script>
 
 <style>
