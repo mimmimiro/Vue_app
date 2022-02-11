@@ -29,19 +29,19 @@ legge dem på forsiden, men jeg synes dette ble mye kulere.-->
 
 
   .home__contact { 
-    display: inline-block;
-	 background: #da552f;
-	 width: 230px;
-	 height: 230px;
-	 margin: 60px;
-	 border-radius: 130px;
-	 text-align: center;
-	 font-size: 30px;
-	 font-weight: bold;
-	 padding-top: 130px;
-	 text-decoration: none;
-	 color: blanchedalmond;
-	 font-family: var(--font-family);
+     display: inline-block;
+	  background: #da552f;
+	  width: 230px;
+	  height: 230px;
+	  margin: 60px;
+	  border-radius: 130px;
+	  text-align: center;
+	  font-size: 30px;
+	  font-weight: bold;
+	  padding-top: 130px;
+	  text-decoration: none;
+	  color: blanchedalmond;
+	  font-family: var(--font-family);
 	}
 	
 	.home__todolist {
