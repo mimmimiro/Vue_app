@@ -1,6 +1,6 @@
 <!-- kilde: forelesning med Alejandro Rojas -->
 <template >
-  <form class="todolist">
+  <section class="todolist">
    <h1 class="title">{{ title }}</h1>
 	<form class="container">
 		<h3 class="container__title">New Task </h3>
@@ -17,7 +17,7 @@
 			 List is empty!</h4>
 	</form>
 	
-	</form>
+	</section>
 	  <div class="guestlist">
 	    <h4 class="guestlist__title">{{ invited }}</h4>
 	    <span>{{ guestList }}</span>
@@ -80,9 +80,9 @@ export default {
 
 		 deletePlanningTask(index) {
 			 this.tasks.splice(index, 1);
-		 }
-	}
-  }	
+		 },
+	},
+  };	
 </script>
 
 <style>
