@@ -73,7 +73,7 @@ export default {
 
 		  this.tasks.push({
 			  name: this.task
-		  })
+		  });
 		 },
 
 		 deletePlanningTask(index) {
