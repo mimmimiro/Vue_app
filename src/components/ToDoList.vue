@@ -1,35 +1,86 @@
-<!-- kilde: https://vuejsexamples.com/tag/todo/
-            https://v3.vuejs.org/guide/composition-api-template-refs.html#usage-inside-v-for-->
+
 <template >
- <h1>{{ title }}</h1>
+  <form class="todolist">
+   <h1 class="title">{{ title }}</h1>
+	<form class="container">
+		<h3 class="container__title">New Task </h3>
+		<input class="container__input" type="text" placeholder="Enter task" v-model="task">
+		<button class="container__button" @click="addPlanningTask">Add Task</button>
+		<h3 class="container__title-second">To Do List</h3>
+		<ul>
+		    <li v-for="(task, index) in tasks" :key="index">
+			 <span>{{ task.name }} </span>
+			 <button class="todolist__button" @click="deletePlanningTask">Remove</button>
+		    </li>
+	   </ul>
+		 <h4 class="container__list-title" v-if="task.length === 0">
+			 List is empty!</h4>
+	</form>
 	
-	<span>{{ task }}</span>
-	<button v-on:click="addTask">Add new task</button>
+	</form>
+	  <div class="guestlist">
+	    <h4 class="guestlist__title">{{ invited }}</h4>
+	    <span>{{ guestList }}</span>
+	    <button class="guestlist__button" @click="toggleGuestList">Guestlist</button>
+	  <div v-if="isGuestListVisible === true">
+	   <ul>
+		<li v-for="guest in people" :key="guest.id.value">
+			{{ guest.name.first }} {{ guest.name.last }}</li>
+	  </ul>
+	  </div>
+	 </div>
 </template>
 
 <script>
 export default {
-	name: 'home',
+	props: {
+			titleName: {
+				type: String,
+				default: 'todolist',
+			},
+	},
 	data() {
 		return {
-			title: 'Add Task',
+			title: 'Planning the party!',
 			task: '',
+			tasks: [],
+			invited: 'Who is invited?',
+			guestList: '',
+			people: [],
+			name: '',
+			isGuestListVisible: false
 			
 		}
 	},
 	created() {
-		this.addTask();
+		this.addGuest();
 	},
 
 	methods: {
-		async addTask() {
-			const url = 'https://randomuser.me/api/?page=2&results=20';
+		async addGuest() {
+			const url = 'https://randomuser.me/api/?page=2&results=8';
 			const res = await fetch(url);
 			const { results }   = await res.json();
-			this.name = `${results[0].name.first} ${results[0].name.last}`;
+			this.people = results;
 			
+		},
+		 toggleGuestList() {
+			this.isGuestListVisible = !this.isGuestListVisible;
+		 },
+		 addPlanningTask() {
+        if(this.task.length === 0)
+		  return;
+
+		  this.tasks.push({
+			  name: this.task
+		  })
+		 },
+
+		 deletePlanningTask(index) {
+			 this.tasks.splice(index, 1);
+		 }
 	}
-}
+  }
 	
 
 /*
@@ -122,7 +173,8 @@ export default {
         }    
     }
 
-  .todolist {
+  .todolist, 
+  .guestlist  {
 	  display: flex;
 	  flex-flow: column nowrap;
 	  font-family: var(--font-family);
@@ -131,7 +183,7 @@ export default {
      width: 100%;
    }
 
-  .container {
+  .container{
 	  display: flex;
 	  flex-direction: column;
    }
@@ -149,7 +201,8 @@ export default {
 	  border: solid 1px darkcyan;
    }
 
-  .container__button {
+  .container__button,
+  .guestlist__button {
      background: #da552f;
      border: solid 1px #da552f;
      color: white;
@@ -185,14 +238,16 @@ export default {
 	  font-weight: 600;
    } 
 
-  .container__title
-  .container__title-second 
-  .title {
+  .container__title,
+  .container__title-second, 
+  .title,
+  .guestlist__title {
 	  font-family: var(--font-family);
 	
   }
 
-  .container__list-title {
+  .container__list-title, 
+  .guestlist__title {
      border-bottom: solid 2px darkcyan;
 	  font-size: 0.7em;
 	  font-family: var(--font-family);
