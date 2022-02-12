@@ -8,8 +8,6 @@
       <p class="quiz__second-title">This is question number {{ index }}</p>
       <p class="quiz__third-title">If the amount is {{question.time}} hours?</p>
       <p class="quiz__firth-title">How many seconds is there?</p>
-      <br />
-
       <!-- added more options for each question-->
       <!-- v-bind creates binding with answers and v-model is binded to pick, witch is set to none-->
       <ul class="quiz__options">
@@ -17,7 +15,6 @@
         <input class="quiz__input" id="RadioA"  type="radio" v-model="pick" :value="question.answer1">
         <label class="quiz__label" for="RadioA">{{question.answer1}}</label>
       </span>
-       <br>
       <span class="quiz__span">
         <input class="quiz__input" id="RadioB" type="radio" v-model="pick" :value="question.answer2" >
         <label class="quiz__label" for="RadioB">{{question.answer2}}</label>
@@ -29,19 +26,13 @@
       </ul>
     </div>
   </div>
-  <br>
-
     <!-- chech your answer with these button, it will reset if  you pick the wrong answer-->
       <button class="quiz__button" @click="check">
       check
       </button>
-  <br>
-
-  <br>
       <button class="quiz__button" @click="next">
       next
       </button>
-  <br>
      <!-- the previous button appears only when the question page is larger than 1 -->
       <button class="quiz__button" v-show="questionIndex > 1" @click="prev">
       prev

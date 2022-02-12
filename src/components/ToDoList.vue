@@ -28,7 +28,6 @@ export default {
 			const { results }   = await res.json();
 			this.name = `${results[0].name.first} ${results[0].name.last}`;
 			
-		}
 	}
 }
 	
