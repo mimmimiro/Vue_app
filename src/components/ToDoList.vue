@@ -160,7 +160,6 @@ export default {
   .title,
   .guestlist__title {
 	  font-family: var(--font-family);
-	
   }
 
   .container__list-title, 
@@ -187,11 +186,11 @@ export default {
 		margin-bottom: 0.5em;
    }
 			
-	span {
+	/* span { 
 		cursor: pointer;
    }
 	
 	.done {
 		text-decoration: line-through;
-   }
+    } */
 </style>
