@@ -9,7 +9,7 @@
 		  <RouterLink class="header__navigation" :to="{ name: 'slideshow' }">Slideshow</RouterLink>
 		</nav>
 	
-	 <Routerview />
+	 <!-- <Routerview /> -->
 </template>
 
 <script>
