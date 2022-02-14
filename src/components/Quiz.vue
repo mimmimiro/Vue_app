@@ -9,7 +9,7 @@
       <p class="quiz__third-title">If the amount is {{question.time}} hours?</p>
       <p class="quiz__firth-title">How many seconds is there?</p>
       <!-- added more options for each question-->
-      <!-- v-bind creates binding with answers and v-model is binded to pick, witch is set to none-->
+      <!-- v-bind creates binding with answers and v-model is binded to pick and answers in the variabel, witch is set to none-->
       <ul class="quiz__options">
       <span class="quiz__span">
         <input class="quiz__input" id="RadioA"  type="radio" v-model="pick" :value="question.answer1">
