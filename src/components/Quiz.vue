@@ -3,6 +3,7 @@
   <section class="quiz">
     <h1 class="quiz__title">Try my quiz!</h1>
       <div v-for="(question, index) in quiz" :key="index">
+        <!-- Hide all questions, show only the one with index === to current question index -->
       <div v-show="index === questionIndex">
       <!-- start page will always start at index 1, the question is static, but the answers will change for each page-->
       <p class="quiz__second-title">This is question number {{ index }}</p>
