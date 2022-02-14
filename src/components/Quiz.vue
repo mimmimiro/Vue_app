@@ -4,7 +4,7 @@
     <h1 class="quiz__title">Try my quiz!</h1>
       <div v-for="(question, index) in quiz" :key="index">
       <div v-show="index === questionIndex">
-      <!-- start page will always start at index 1, the question is static, but the answrs will change for each page-->
+      <!-- start page will always start at index 1, the question is static, but the answers will change for each page-->
       <p class="quiz__second-title">This is question number {{ index }}</p>
       <p class="quiz__third-title">If the amount is {{question.time}} hours?</p>
       <p class="quiz__firth-title">How many seconds is there?</p>
