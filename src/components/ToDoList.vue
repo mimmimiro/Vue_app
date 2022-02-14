@@ -1,6 +1,6 @@
 <!-- kilde: forelesning med Alejandro Rojas -->
 <template >
-  <section class="todolist">
+  <form class="todolist">
    <h1 class="title">{{ title }}</h1>
 	<form class="container">
 		<h3 class="container__title">New Task </h3>
@@ -17,7 +17,7 @@
 			 List is empty!</h4>
 	</form>
 	
-	</section>
+	</form>
 	  <div class="guestlist">
 	    <h4 class="guestlist__title">{{ invited }}</h4>
 	    <span>{{ guestList }}</span>
