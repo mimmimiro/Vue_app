@@ -16,7 +16,7 @@
 		 <h4 class="container__list-title" v-if="task.length === 0">
 			 List is empty!</h4>
 	</form>
-	
+	<!-- the guestlist is generated with API, by clicking the button the list apears-->
 	</form>
 	  <div class="guestlist">
 	    <h4 class="guestlist__title">{{ invited }}</h4>
