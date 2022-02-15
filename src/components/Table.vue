@@ -162,9 +162,9 @@ export default {
 		color: darkcyan;
 	}
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 675px) {
         table {
-            margin-left: 5px;
+            margin-left: 100px;
         }
     }
 </style>

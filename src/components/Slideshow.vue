@@ -132,9 +132,9 @@
     color: black;
  }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 675px) {
     img {
-      width: 100%;
+      margin-left: 60px;
  }
  }
 </style>

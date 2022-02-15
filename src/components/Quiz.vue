@@ -38,6 +38,10 @@
       <button class="quiz__button" v-show="questionIndex > 1" @click="prev">
       prev
      </button>
+     
+     <div v-show="questionIndex > 4">
+       <h3>Finished!</h3>
+     </div>
 </section>
   
 </template>
