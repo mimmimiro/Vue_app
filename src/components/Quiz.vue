@@ -36,12 +36,14 @@
       </button>
      <!-- the previous button appears only when the question page is larger than 1 -->
       <button class="quiz__button" v-show="questionIndex > 1" @click="prev">
-      prev
+      previous
      </button>
-     
+
      <div v-show="questionIndex > 4">
        <h3>Finished!</h3>
+       <button class="quiz__button" @click="playAgain">Play again!</button>
      </div>
+     
 </section>
   
 </template>
@@ -117,6 +119,9 @@ var quiz = [
       } else {
         alert("You suck!");
       }
+    },
+    playAgain() {
+      this.questionIndex === 1;
     }
   }
 };
