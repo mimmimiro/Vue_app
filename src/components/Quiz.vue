@@ -39,9 +39,9 @@
       previous
      </button>
       <!-- this sections appear at the end of the quiz-->
-     <div v-show="questionIndex > 4">
-       <h3>Finished!</h3>
-       <button class="quiz__button" @click="playAgain">Play again!</button>
+     <div>
+       <h3 v-if="questionIndex > 4">Finished!</h3>
+       <button class="quiz__button" @click="playAgain" v-else>Play again!</button>
      </div>
      
 </section>
