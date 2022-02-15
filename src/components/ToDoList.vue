@@ -5,7 +5,7 @@
 	<form class="container">
 		<h3 class="container__title">New Task </h3>
 		<input class="container__input" type="text" placeholder="Enter task" v-model="task">
-		<button class="container__button" @click="addPlanningTask">Add Task</button>
+		<button type='button' class="container__button" @click="addPlanningTask">Add Task</button>
 		<h3 class="container__title-second">To Do List</h3>
 		<ul>
 		    <li v-for="(task, index) in tasks" :key="index">
@@ -59,16 +59,6 @@ export default {
 	},
 
 	methods: {
-		async addGuest() {
-			const url = 'https://randomuser.me/api/?page=2&results=8';
-			const res = await fetch(url);
-			const { results }   = await res.json();
-			this.people = results;
-			
-		},
-		 toggleGuestList() {
-			this.isGuestListVisible = !this.isGuestListVisible;
-		 },
 		 addPlanningTask() {
         if(this.task.length === 0)
 		  return;
@@ -80,6 +70,15 @@ export default {
 
 		 deletePlanningTask(index) {
 			 this.tasks.splice(index, 1);
+		 },
+		 async addGuest() {
+			const url = 'https://randomuser.me/api/?page=2&results=8';
+			const res = await fetch(url);
+			const { results }   = await res.json();
+			this.people = results;
+		},
+		toggleGuestList() {
+			this.isGuestListVisible = !this.isGuestListVisible;
 		 },
 	},
   };	
