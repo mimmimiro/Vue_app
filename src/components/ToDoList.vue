@@ -21,7 +21,7 @@
 	  <div class="guestlist">
 	    <h4 class="guestlist__title">{{ invited }}</h4>
 	    <span>{{ guestList }}</span>
-	    <button class="guestlist__button" @click="toggleGuestList">Guestlist</button>
+		 <button class="guestlist__button" @click="isGuestListVisible =!isGuestListVisible">Guestlist</button>
 	  <div v-if="isGuestListVisible === true">
 	   <ul>
 		<li v-for="guest in people" :key="guest.id.value">
@@ -56,6 +56,14 @@ export default {
 	},
 	created() {
 		this.addGuest();
+	}, 
+	computed: {
+		toggle() {
+			if(this.isGuestListVisible) {
+				return false
+			}
+			else return true
+		}
 	},
 
 	methods: {
@@ -77,10 +85,9 @@ export default {
 			const { results }   = await res.json();
 			this.people = results;
 		},
-		toggleGuestList() {
-			this.isGuestListVisible = !this.isGuestListVisible;
-		 },
+		
 	},
+	
   };	
 </script>
 
